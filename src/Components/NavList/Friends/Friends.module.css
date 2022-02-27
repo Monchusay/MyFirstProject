@@ -1,0 +1,15 @@
+.FriendsShortcut {
+  padding: 60px;
+}
+
+.Friends {
+  color: coral;
+}
+
+.Friends:hover {
+  color: black;
+}
+
+.chelIb {
+  display: flex;
+}

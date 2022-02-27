@@ -1,0 +1,15 @@
+.ProfilePage {
+    letter-spacing: 2px;
+    grid-area: mc;
+    padding: 20px;
+    word-spacing: 2px;
+}
+.ProfilePage img {
+    width: 300px;
+}
+.item {
+    color: darkred;
+}
+.item1 {
+    color: indigo;
+}

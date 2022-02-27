@@ -1,0 +1,20 @@
+.NavList {
+    letter-spacing: 3px;
+    grid-area: na;
+    background-color: crimson;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.item a {
+    color: coral;
+    text-decoration: none;
+}
+
+.item a:focus {
+    color: black;
+}
+
+.item a:hover {
+    color: black;
+}

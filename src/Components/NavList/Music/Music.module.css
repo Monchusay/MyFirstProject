@@ -1,0 +1,33 @@
+.Music {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-template-rows: 40px 2fr;
+  grid-template-areas:
+    "a b"
+    "c c";
+  padding: 15px;
+}
+.Recommended:hover {
+  color: black;
+}
+.MyMusic:hover {
+  color: black;
+}
+
+.MyMusic {
+  grid-area: a;
+  color: red;
+  text-decoration: none;
+}
+
+.Recommended {
+  grid-area: b;
+  color: red;
+  text-decoration: none;
+}
+
+.MySongs {
+  grid-area: c;
+  color: indigo;
+}
+

@@ -12,6 +12,7 @@ const ProfilePage = (props) => {
         postData={props.postData}
         addPost={props.addPost}
         newPostText={props.newPostText}
+        updateNewPostText={props.updateNewPostText}
       />
     </div>
   );

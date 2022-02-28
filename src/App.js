@@ -27,6 +27,7 @@ const App = (props) => {
                   postData={props.postData}
                   addPost={props.addPost}
                   newPostText={props.newPostText}
+                  updateNewPostText={props.updateNewPostText}
                 />
               }
             />

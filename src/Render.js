@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import {addPost} from "./Redux/State"
+import {addPost, updateNewPostText} from "./Redux/State"
 
 export let RerenderTree = (state) => {
     ReactDOM.render(
@@ -15,6 +15,7 @@ export let RerenderTree = (state) => {
                 dialogsData={state.dialogPage.dialogsData}
                 shortcutData={state.friendsPage.shortcutData}
                 newPostText={state.profilePage.newPostText}
+                updateNewPostText={updateNewPostText}
             />
         </React.StrictMode>,
         document.getElementById("root")

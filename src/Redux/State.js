@@ -17,7 +17,7 @@ let state = {
                     "https://static8.depositphotos.com/1156926/1012/i/600/depositphotos_10120856-stock-photo-toad-isolated-on-white-background.jpg",
             },
         ],
-        newPostText: 'Pizdos'
+        newPostText: 'BLYAAAAAA'
     },
     musicPage: {
         songData: [
@@ -77,15 +77,19 @@ let state = {
     }
 }
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
     let newPost = {
         id:3,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         likesCount: 0,
         image: "https://vologdamarafon.ru/static/img/no-photo.png"
     }
     state.profilePage.postData.push(newPost);
+    state.profilePage.newPostText = '';
     RerenderTree(state);
 }
-
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    RerenderTree(state);
+}
 export default state;

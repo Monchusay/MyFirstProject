@@ -9,10 +9,9 @@ const ProfilePage = (props) => {
       </div>
       <div className={style.item1}>Avatar+description</div>
       <MyPosts
+          dispatch={props.dispatch}
         postData={props.postData}
-        addPost={props.addPost}
         newPostText={props.newPostText}
-        updateNewPostText={props.updateNewPostText}
       />
     </div>
   );

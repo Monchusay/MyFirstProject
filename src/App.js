@@ -25,9 +25,8 @@ const App = (props) => {
               element={
                 <ProfilePage
                   postData={props.postData}
-                  addPost={props.addPost}
+                  dispatch={props.dispatch}
                   newPostText={props.newPostText}
-                  updateNewPostText={props.updateNewPostText}
                 />
               }
             />
@@ -35,7 +34,6 @@ const App = (props) => {
               path="/Dialogs/*"
               element={
                 <Dialogs
-                  messagesData={props.messagesData}
                   dialogsData={props.dialogsData}
                 />
               }

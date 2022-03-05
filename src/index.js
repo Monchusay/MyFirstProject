@@ -1,11 +1,29 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import "./index.css";
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import {RerenderTree} from "./Render";
-import state from "./Redux/State";
+import store from "./Redux/State";
 
-RerenderTree(state);
+let RerenderTree = (state) => {
+    ReactDOM.render(
+        <React.StrictMode>
+            <App
+                dispatch={store.dispatch.bind(store)}
+                postData={store.getState().profilePage.postData}
+                songData={store.getState().musicPage.songData}
+                dialogsData={store.getState().dialogPage.dialogsData}
+                shortcutData={store.getState().friendsPage.shortcutData}
+                newPostText={store.getState().profilePage.newPostText}
+            />
+        </React.StrictMode>,
+        document.getElementById("root")
+    );
+}
 
+RerenderTree(store.getState());
+
+store.subscribe(RerenderTree);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

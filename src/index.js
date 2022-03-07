@@ -17,6 +17,7 @@ let RerenderTree = (state) => {
                 dialogsData={store.getState().dialogPage.dialogsData}
                 shortcutData={store.getState().friendsPage.shortcutData}
                 newPostText={store.getState().profilePage.newPostText}
+                newMessageText={store.getState().messagesPage.newMessageText}
             />
         </React.StrictMode>,
         document.getElementById("root")

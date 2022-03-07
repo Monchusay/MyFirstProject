@@ -9,7 +9,9 @@ let RerenderTree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
             <App
+                dispatch1={store.dispatch1.bind(store)}
                 dispatch={store.dispatch.bind(store)}
+                messageData={store.getState().messagesPage.messageData}
                 postData={store.getState().profilePage.postData}
                 songData={store.getState().musicPage.songData}
                 dialogsData={store.getState().dialogPage.dialogsData}

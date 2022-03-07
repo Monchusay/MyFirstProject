@@ -1,8 +1,23 @@
 const ADD_POST='ADD-POST';
 const UPDATE_NEW_POST_TEXT='UPDATE-NEW-POST-TEXT';
+const SEND_MESSAGE='SEND-MESSAGE';
+const UPDATE_NEW_MESSAGE_TEXT='UPDATE-NEW-MESSAGE-TEXT';
 
 let store = {
     _state: {
+        messagesPage:{
+            messageData: [
+                {
+                    image: "https://vologdamarafon.ru/static/img/no-photo.png",
+                    message: "Privet Dima"
+                },
+                {
+                    image: "https://www.meme-arsenal.com/memes/b5b6a757d1bd204196272992a74ebec3.jpg",
+                    message: "Ny privet"
+                }
+            ],
+            newMessageText: '<type here>'
+        },
         profilePage: {
             postData: [
                 {
@@ -99,6 +114,34 @@ let store = {
             this._state.profilePage.newPostText = action.newText;
             this._callSubscriber (this._state);
         }
+    },
+    dispatch1(action1){
+        if (action1.type === 'SEND_MESSAGE') {
+            let newMessage = {
+                image: "https://vologdamarafon.ru/static/img/no-photo.png",
+                message: this._state.messagesPage.newMessageText
+            }
+            this._state.messagesPage.messageData.push(newMessage);
+            this._state.messagesPage.newMessageText = '';
+            this._callSubscriber (this._state);
+        }
+        else if (action1.type === 'UPDATE_NEW_MESSAGE_TEXT') {
+            this._state.messagesPage.newMessageText = action1.newMText;
+            this._callSubscriber (this._state);
+        }
+    }
+}
+
+export const updateNewMessageTextActionCreator =(messageText)=> {
+    return {
+        type: 'UPDATE_NEW_MESSAGE_TEXT',
+        newMText:messageText
+    }
+}
+
+export const sendMessageActionCreator = () => {
+    return {
+        type: 'SEND_MESSAGE'
     }
 }
 

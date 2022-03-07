@@ -1,6 +1,6 @@
 import style from "./Dialogs.module.css";
 import Dialog from "./Dialog/Dialog";
-import Pizdec from "./Dialog/1234";
+import Messages from "./Messages/Messages"
 import { Routes, Route } from "react-router-dom";
 
 const Dialogs = (props) => {
@@ -11,9 +11,9 @@ const Dialogs = (props) => {
   return (
     <div className={style.Dialogs}>
       <div className={style.DialogItems}>{dialogsElements}</div>
-      <div>
+      <div className={style.Messages}>
         <Routes>
-          <Route path="/1" element={<Pizdec />} />
+          <Route path="/1" element={<Messages dispatch1={props.dispatch1} messageData={props.messageData}/>} />
         </Routes>
       </div>
     </div>

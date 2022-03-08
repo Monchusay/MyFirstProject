@@ -99,6 +99,7 @@ let store = {
     },
 
     dispatch(action) {
+        debugger
         if (action.type === 'ADD_POST') {
             let newPost = {
                 id:3,
@@ -114,9 +115,7 @@ let store = {
             this._state.profilePage.newPostText = action.newText;
             this._callSubscriber (this._state);
         }
-    },
-    dispatch1(action1){
-        if (action1.type === 'SEND_MESSAGE') {
+        else if (action.type === 'SEND_MESSAGE') {
             let newMessage = {
                 image: "https://vologdamarafon.ru/static/img/no-photo.png",
                 message: this._state.messagesPage.newMessageText
@@ -125,11 +124,11 @@ let store = {
             this._state.messagesPage.newMessageText = '';
             this._callSubscriber (this._state);
         }
-        else if (action1.type === 'UPDATE_NEW_MESSAGE_TEXT') {
-            this._state.messagesPage.newMessageText = action1.newMText;
+        else if (action.type === 'UPDATE_NEW_MESSAGE_TEXT') {
+            this._state.messagesPage.newMessageText = action.newMText;
             this._callSubscriber (this._state);
         }
-    }
+    },
 }
 
 export const updateNewMessageTextActionCreator =(messageText)=> {

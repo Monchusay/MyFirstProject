@@ -5,11 +5,10 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import store from "./Redux/State";
 
-let RerenderTree = (state) => {
+let RerenderTree = () => {
     ReactDOM.render(
         <React.StrictMode>
             <App
-                dispatch1={store.dispatch1.bind(store)}
                 dispatch={store.dispatch.bind(store)}
                 messageData={store.getState().messagesPage.messageData}
                 postData={store.getState().profilePage.postData}

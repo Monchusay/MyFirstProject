@@ -8,7 +8,7 @@ const MyPosts = (props) => {
     <Post
       id={post.id}
       message={post.message}
-      LikesCount={post.likesCount}
+      likesCount={post.likesCount}
       image={post.image}
     />
   ));

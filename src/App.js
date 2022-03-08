@@ -35,7 +35,7 @@ const App = (props) => {
               element={
                 <Dialogs
                     newMessageText={props.newMessageText}
-                    dispatch1={props.dispatch1}
+                    dispatch={props.dispatch}
                     messageData={props.messageData}
                   dialogsData={props.dialogsData}
                 />

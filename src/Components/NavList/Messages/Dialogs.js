@@ -13,7 +13,7 @@ const Dialogs = (props) => {
       <div className={style.DialogItems}>{dialogsElements}</div>
       <div className={style.Messages}>
         <Routes>
-          <Route path="/1" element={<Messages newMessageText={props.newMessageText} dispatch1={props.dispatch1} messageData={props.messageData}/>} />
+          <Route path="/1" element={<Messages newMessageText={props.newMessageText} dispatch={props.dispatch} messageData={props.messageData}/>} />
         </Routes>
       </div>
     </div>

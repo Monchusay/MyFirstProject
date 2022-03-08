@@ -1,15 +1,16 @@
 import style from "./MyPosts.module.css";
 import Post from "./Post/Post";
 import React from "react";
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../Redux/State";
+import {
+  addPostActionCreator,
+  updateNewPostTextActionCreator,
+} from "../../../Redux/State";
 
 const MyPosts = (props) => {
   let postElements = props.postData.map((post) => (
     <Post
-      id={post.id}
-      message={post.message}
-      likesCount={post.likesCount}
-      image={post.image}
+      dispatch={props.dispatch}
+      {...post}
     />
   ));
 

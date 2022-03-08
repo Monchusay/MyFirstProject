@@ -5,7 +5,7 @@ import Song from "./Song/Song";
 const Music = (props) => {
 
   let songElement = props.songData.map((song) => (
-    <Song image={song.image} singer={song.singer} songname={song.songname} />
+    <Song key={song.songName} image={song.image} singer={song.singer} songname={song.songName} />
   ));
 
   return (

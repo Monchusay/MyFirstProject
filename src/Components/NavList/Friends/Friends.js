@@ -3,7 +3,8 @@ import style from "./Friends.module.css";
 
 const Friends = (props) => {
   let FriendsShortcut = props.shortcutData.map((friend) => (
-    <Friend image={friend.image} friendName={friend.friendName} />
+    <Friend key={friend.friendName}
+        image={friend.image} friendName={friend.friendName} />
   ));
 
   return (

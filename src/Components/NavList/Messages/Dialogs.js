@@ -5,7 +5,9 @@ import { Routes, Route } from "react-router-dom";
 
 const Dialogs = (props) => {
   let dialogsElements = props.dialogsData.map((dialog) => (
-    <Dialog image={dialog.image} username={dialog.name} id={dialog.id} />
+    <Dialog
+        key={dialog.id}
+        image={dialog.image} username={dialog.name} id={dialog.id} />
   ));
 
   return (

@@ -9,6 +9,7 @@ import {
 const Messages = (props) => {
   let messageElements = props.messageData.map((message) => (
     <Message
+        key={message.message}
         image={message.image}
         message={message.message}
     />

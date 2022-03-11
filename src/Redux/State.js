@@ -1,9 +1,5 @@
-const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
-const SEND_MESSAGE = "SEND-MESSAGE";
-const UPDATE_NEW_MESSAGE_TEXT = "UPDATE-NEW-MESSAGE-TEXT";
-const POST_HAS_LIKED = "POST-HAS-LIKED";
-const POST_HAS_DISLIKED = "POST-HAS-DISLIKED";
+import ProfilePageReducer from "./ProfilePageReducer";
+import MessagesPageReducer from "./MessagesPageReducer";
 
 let store = {
   _state: {
@@ -141,59 +137,10 @@ let store = {
   },
 
   dispatch(action) {
-    if (action.type === "ADD_POST") {
-      let newPost = {
-        id: 3,
-        message: this._state.profilePage.newPostText,
-        likesCount: 0,
-        DislikesCount: 0,
-        image: "https://vologdamarafon.ru/static/img/no-photo.png",
-      };
-      this._state.profilePage.postData.push(newPost);
-      this._state.profilePage.newPostText = "";
+      this._state.messagesPage = MessagesPageReducer(this._state.messagesPage, action);
+      this._state.profilePage = ProfilePageReducer(this._state.profilePage, action);
       this._callSubscriber(this._state);
-    } else if (action.type === "UPDATE_NEW_POST_TEXT") {
-      this._state.profilePage.newPostText = action.newText;
-      this._callSubscriber(this._state);
-    } else if (action.type === "SEND_MESSAGE") {
-      let newMessage = {
-        image: "https://vologdamarafon.ru/static/img/no-photo.png",
-        message: this._state.messagesPage.newMessageText,
-      };
-      this._state.messagesPage.messageData.push(newMessage);
-      this._state.messagesPage.newMessageText = "";
-      this._callSubscriber(this._state);
-    } else if (action.type === "UPDATE_NEW_MESSAGE_TEXT") {
-      this._state.messagesPage.newMessageText = action.newMText;
-      this._callSubscriber(this._state);
-    } else if (action.type === "POST_HAS_LIKED") {
-      let postIndex = this._state.profilePage.postData.findIndex(
-        (post) => post.id === action.id
-      );
-      this._state.profilePage.postData[postIndex].likesCount += 1;
-      this._callSubscriber(this._state);
-    } else if (action.type === "POST_HAS_DISLIKED") {
-      let postIndex = this._state.profilePage.postData.findIndex(
-        (post) => post.id === action.id
-      );
-      this._state.profilePage.postData[postIndex].DislikesCount += 1;
-      this._callSubscriber(this._state);
-    }
-  },
-};
-
-export const postHasDisLikedActionCreator = (id) => {
-  return {
-    type: "POST_HAS_DISLIKED",
-    id: id,
-  };
-};
-
-export const postHasLikedActionCreator = (id) => {
-  return {
-    type: "POST_HAS_LIKED",
-    id: id,
-  };
+  }
 };
 
 export const updateNewMessageTextActionCreator = (messageText) => {

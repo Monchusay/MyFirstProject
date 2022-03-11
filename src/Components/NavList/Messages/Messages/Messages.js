@@ -1,10 +1,9 @@
 import style from "./Messages.module.css";
 import Message from "./Message/Message";
 import React from "react";
-import {
-  sendMessageActionCreator,
+import {sendMessageActionCreator,
   updateNewMessageTextActionCreator,
-} from "../../../../Redux/State";
+} from "../../../../Redux/MessagesPageReducer";
 
 const Messages = (props) => {
   let messageElements = props.messageData.map((message) => (

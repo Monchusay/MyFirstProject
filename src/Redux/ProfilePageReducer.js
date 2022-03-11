@@ -27,17 +27,30 @@ const ProfilePageReducer = (state, action) => {
 };
 
 export const postHasDisLikedActionCreator = (id) => {
-    return {
-        type: "POST_HAS_DISLIKED",
-        id: id,
-    };
+  return {
+    type: "POST_HAS_DISLIKED",
+    id: id,
+  };
 };
 
 export const postHasLikedActionCreator = (id) => {
-    return {
-        type: "POST_HAS_LIKED",
-        id: id,
-    };
+  return {
+    type: "POST_HAS_LIKED",
+    id: id,
+  };
 };
 
-export default ProfilePageReducer
+export const addPostActionCreator = () => {
+  return {
+    type: "ADD_POST",
+  };
+};
+
+export const updateNewPostTextActionCreator = (text) => {
+  return {
+    type: "UPDATE_NEW_POST_TEXT",
+    newText: text,
+  };
+};
+
+export default ProfilePageReducer;

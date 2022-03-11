@@ -21,4 +21,18 @@ const MessagesPageReducer = (state, action) => {
   return state;
 };
 
+export const updateNewMessageTextActionCreator = (messageText) => {
+  return {
+    type: "UPDATE_NEW_MESSAGE_TEXT",
+    newMText: messageText,
+  };
+};
+
+export const sendMessageActionCreator = () => {
+  return {
+    type: "SEND_MESSAGE",
+  };
+};
+
+
 export default MessagesPageReducer

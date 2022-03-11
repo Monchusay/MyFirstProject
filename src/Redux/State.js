@@ -143,30 +143,4 @@ let store = {
   }
 };
 
-export const updateNewMessageTextActionCreator = (messageText) => {
-  return {
-    type: "UPDATE_NEW_MESSAGE_TEXT",
-    newMText: messageText,
-  };
-};
-
-export const sendMessageActionCreator = () => {
-  return {
-    type: "SEND_MESSAGE",
-  };
-};
-
-export const addPostActionCreator = () => {
-  return {
-    type: "ADD_POST",
-  };
-};
-
-export const updateNewPostTextActionCreator = (text) => {
-  return {
-    type: "UPDATE_NEW_POST_TEXT",
-    newText: text,
-  };
-};
-
 export default store;

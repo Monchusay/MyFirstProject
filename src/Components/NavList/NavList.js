@@ -1,6 +1,7 @@
 import style from "./NavList.module.css";
 import { NavLink } from "react-router-dom";
 import Friends from "./Friends/Friends";
+import store from "../../Redux/Store";
 
 const NavList = (props) => {
   return (
@@ -22,7 +23,7 @@ const NavList = (props) => {
       </div>
       <div>
         <div>
-          <Friends shortcutData={props.shortcutData} />
+          <Friends shortcutData={props.friendsPage.shortcutData} />
         </div>
       </div>
     </nav>

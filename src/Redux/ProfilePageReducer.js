@@ -1,9 +1,25 @@
-const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
-const POST_HAS_LIKED = "POST-HAS-LIKED";
-const POST_HAS_DISLIKED = "POST-HAS-DISLIKED";
+let initialState = {
+  postData: [
+    {
+      id: 1,
+      message: "I wanna commit suicide",
+      likesCount: 69,
+      DislikesCount: 11,
+      image: "https://thedb.ru/upload/image/toad.png",
+    },
+    {
+      id: 2,
+      message: "Go on then Lol",
+      likesCount: 20,
+      DislikesCount: 42,
+      image:
+          "https://static8.depositphotos.com/1156926/1012/i/600/depositphotos_10120856-stock-photo-toad-isolated-on-white-background.jpg",
+    },
+  ],
+  newPostText: "<type here>",
+};
 
-const ProfilePageReducer = (state, action) => {
+const ProfilePageReducer = (state = initialState, action) => {
   if (action.type === "ADD_POST") {
     let newPost = {
       id: 3,

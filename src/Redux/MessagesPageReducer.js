@@ -1,7 +1,19 @@
-const SEND_MESSAGE = "SEND-MESSAGE";
-const UPDATE_NEW_MESSAGE_TEXT = "UPDATE-NEW-MESSAGE-TEXT";
+let initialState = {
+  messageData: [
+    {
+      image: "https://vologdamarafon.ru/static/img/no-photo.png",
+      message: "Privet Dima",
+    },
+    {
+      image:
+          "https://www.meme-arsenal.com/memes/b5b6a757d1bd204196272992a74ebec3.jpg",
+      message: "Ny privet",
+    },
+  ],
+  newMessageText: "<type here>",
+};
 
-const MessagesPageReducer = (state, action) => {
+const MessagesPageReducer = (state=initialState, action) => {
   switch (action.type) {
     case "SEND_MESSAGE":
       let newMessage = {

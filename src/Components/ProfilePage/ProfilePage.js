@@ -10,8 +10,8 @@ const ProfilePage = (props) => {
       <div className={style.item1}>Avatar+description</div>
       <MyPosts
         dispatch={props.dispatch}
-        postData={props.postData}
-        newPostText={props.newPostText}
+        postData={props.profilePage.postData}
+        newPostText={props.profilePage.newPostText}
       />
     </div>
   );

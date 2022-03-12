@@ -13,20 +13,19 @@ const App = (props) => {
     <BrowserRouter>
       <div className={style.appWrapper}>
         <Header />
-        <NavList shortcutData={props.shortcutData} />
+        <NavList friendsPage={props.state.friendsPage} />
         <div className={style.MainObj}>
           <Routes>
             <Route
               path="/Music/*"
-              element={<Music songData={props.songData} />}
+              element={<Music songData={props.state.musicPage.songData} />}
             />
             <Route
               path="/Profile/*"
               element={
                 <ProfilePage
-                  postData={props.postData}
-                  dispatch={props.dispatch}
-                  newPostText={props.newPostText}
+                    dispatch={props.dispatch}
+                    profilePage={props.state.profilePage}
                 />
               }
             />
@@ -34,10 +33,9 @@ const App = (props) => {
               path="/Dialogs/*"
               element={
                 <Dialogs
-                    newMessageText={props.newMessageText}
                     dispatch={props.dispatch}
-                    messageData={props.messageData}
-                  dialogsData={props.dialogsData}
+                    messagesPage={props.state.messagesPage}
+                  dialogsData={props.state.dialogPage.dialogsData}
                 />
               }
             />

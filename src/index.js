@@ -11,14 +11,6 @@ let RerenderTree = (state) => {
             <App
                 dispatch={store.dispatch.bind(store)}
                 state={state}
-                /*
-                messageData={store.getState().messagesPage.messageData}
-                postData={store.getState().profilePage.postData}
-                songData={store.getState().musicPage.songData}
-                dialogsData={store.getState().dialogPage.dialogsData}
-                shortcutData={store.getState().friendsPage.shortcutData}
-                newPostText={store.getState().profilePage.newPostText}
-                newMessageText={store.getState().messagesPage.newMessageText}*/
             />
         </React.StrictMode>,
         document.getElementById("root")

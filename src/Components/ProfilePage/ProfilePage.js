@@ -9,7 +9,7 @@ const ProfilePage = (props) => {
       </div>
       <div className={style.item1}>Avatar+description</div>
       <MyPostsContainer
-          store={props.store}
+          /*store={props.store}*/
       />
     </div>
   );

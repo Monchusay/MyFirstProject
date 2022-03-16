@@ -22,7 +22,7 @@ const Dialogs = (props) => {
             path="/1"
             element={
               <MessagesContainer
-                  store={props.store}
+                  /*store={props.store}*/
               />
             }
           />

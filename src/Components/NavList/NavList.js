@@ -22,9 +22,9 @@ const NavList = (props) => {
         <NavLink to="/Settings">Settings</NavLink>
       </div>
       <div>
-        <div>
+        {/*<div>
           <Friends shortcutData={props.friendsPage.shortcutData} />
-        </div>
+        </div>*/}
       </div>
     </nav>
   );

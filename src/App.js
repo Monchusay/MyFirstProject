@@ -6,7 +6,7 @@ import Dialogs from "./Components/NavList/Messages/Dialogs";
 import Music from "./Components/NavList/Music/Music";
 import News from "./Components/NavList/News/News";
 import Settings from "./Components/NavList/Settings/Settings";
-import {Routes, BrowserRouter, Route} from "react-router-dom";
+import { Routes, BrowserRouter, Route } from "react-router-dom";
 
 const App = (props) => {
   return (
@@ -24,8 +24,7 @@ const App = (props) => {
               path="/Profile/*"
               element={
                 <ProfilePage
-                    dispatch={props.dispatch}
-                    profilePage={props.state.profilePage}
+                    store={props.store}
                 />
               }
             />
@@ -33,8 +32,7 @@ const App = (props) => {
               path="/Dialogs/*"
               element={
                 <Dialogs
-                    dispatch={props.dispatch}
-                    messagesPage={props.state.messagesPage}
+                    store={props.store}
                   dialogsData={props.state.dialogPage.dialogsData}
                 />
               }

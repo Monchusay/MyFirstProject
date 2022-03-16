@@ -1,9 +1,6 @@
 import style from "./Messages.module.css";
 import Message from "./Message/Message";
 import React from "react";
-import {sendMessageActionCreator,
-  updateNewMessageTextActionCreator,
-} from "../../../../Redux/MessagesPageReducer";
 
 const Messages = (props) => {
   let messageElements = props.messageData.map((message) => (
@@ -17,12 +14,12 @@ const Messages = (props) => {
   let NewMessageElement = React.createRef();
 
   let OnSendMessage = () => {
-    props.dispatch(sendMessageActionCreator());
+    props.sendMessage()
   };
 
   let OnMessageChange = () => {
     let messageText = NewMessageElement.current.value;
-    props.dispatch(updateNewMessageTextActionCreator(messageText));
+    props.updateNewMessageText(messageText)
   };
 
   return (

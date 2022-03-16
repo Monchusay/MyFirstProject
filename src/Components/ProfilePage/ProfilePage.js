@@ -1,5 +1,5 @@
 import style from "./ProfilePage.module.css";
-import MyPosts from "./My posts/MyPosts";
+import MyPostsContainer from "./My posts/MyPostsContainer";
 
 const ProfilePage = (props) => {
   return (
@@ -8,10 +8,8 @@ const ProfilePage = (props) => {
         <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_focal-760x428,f_auto,q_auto:best/MSNBC/Components/Video/201609/a_ov_Pepe_160928.jpg" />
       </div>
       <div className={style.item1}>Avatar+description</div>
-      <MyPosts
-        dispatch={props.dispatch}
-        postData={props.profilePage.postData}
-        newPostText={props.profilePage.newPostText}
+      <MyPostsContainer
+          store={props.store}
       />
     </div>
   );

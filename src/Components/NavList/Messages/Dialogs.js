@@ -1,8 +1,7 @@
 import style from "./Dialogs.module.css";
 import Dialog from "./Dialog/Dialog";
-import Messages from "./Messages/Messages";
 import { Routes, Route } from "react-router-dom";
-import store from "../../../Redux/Store";
+import MessagesContainer from "./Messages/MessagesContainer";
 
 const Dialogs = (props) => {
   let dialogsElements = props.dialogsData.map((dialog) => (
@@ -22,10 +21,8 @@ const Dialogs = (props) => {
           <Route
             path="/1"
             element={
-              <Messages
-                  dispatch={props.dispatch}
-                newMessageText={props.messagesPage.newMessageText}
-                messageData={props.messagesPage.messageData}
+              <MessagesContainer
+                  store={props.store}
               />
             }
           />

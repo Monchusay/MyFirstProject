@@ -3,9 +3,9 @@ import {sendMessageActionCreator,
   updateNewMessageTextActionCreator,
 } from "../../../../Redux/MessagesPageReducer";
 import Messages from "./Messages";
-import StoreContext from "../../../../StoreContext";
+import {connect} from "react-redux";
 
-const MessagesContainer = () => {
+/*const MessagesContainer = () => {
   return (
       <StoreContext.Consumer>
         { (store) => {
@@ -29,6 +29,24 @@ const MessagesContainer = () => {
         }
       </StoreContext.Consumer>
   );
-};
+};*/
+
+let mapStateToProps = (state) => {
+    return {
+        newMessageText: state.messagesPage.newMessageText,
+        messageData: state.messagesPage.messageData
+    }
+}
+let mapDispatchToProps = (dispatch) => {
+    return {
+        sendMessage: () => {
+            dispatch(sendMessageActionCreator());
+        },
+        updateNewMessageText: (messageText) => {
+            dispatch(updateNewMessageTextActionCreator(messageText));
+        }
+    }
+}
+const MessagesContainer = connect(mapStateToProps, mapDispatchToProps)(Messages);
 
 export default MessagesContainer;

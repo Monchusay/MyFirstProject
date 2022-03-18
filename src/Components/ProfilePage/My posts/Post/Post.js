@@ -5,12 +5,13 @@ import {
 } from "../../../../Redux/ProfilePageReducer";
 
 const Post = (props) => {
-  const PostHasLiked = () => {
-    props.dispatch(postHasLikedActionCreator(props.id));
+
+  let PostHasLiked = (id) => {
+    props.PostHasLiked(id)
   };
 
-  const PostHasDisliked = () => {
-    props.dispatch(postHasDisLikedActionCreator(props.id));
+  let PostHasDisliked = (id) => {
+    props.PostHasDisliked(id)
   };
 
   return (

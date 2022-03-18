@@ -3,37 +3,36 @@ import Header from "./Components/Header/Header";
 import NavList from "./Components/NavList/NavList";
 import ProfilePage from "./Components/ProfilePage/ProfilePage";
 import Dialogs from "./Components/NavList/Messages/Dialogs";
-import Music from "./Components/NavList/Music/Music";
 import News from "./Components/NavList/News/News";
 import Settings from "./Components/NavList/Settings/Settings";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
+import MusicContainer from "./Components/NavList/Music/MusicContainer";
+import DialogsContainer from "./Components/NavList/Messages/DialogsContainer";
 
 const App = (props) => {
   return (
     <BrowserRouter>
       <div className={style.appWrapper}>
         <Header />
-        <NavList friendsPage={props.state.friendsPage} />
+        <NavList/>
         <div className={style.MainObj}>
           <Routes>
             <Route
               path="/Music/*"
-              element={<Music songData={props.state.musicPage.songData} />}
+              element={<MusicContainer/>}
             />
             <Route
               path="/Profile/*"
               element={
-                <ProfilePage
-                   /* store={props.store}*/
-                />
+                <ProfilePage/>
               }
             />
             <Route
               path="/Dialogs/*"
               element={
-                <Dialogs
+                <DialogsContainer
                     /*store={props.store}*/
-                  dialogsData={props.state.dialogPage.dialogsData}
+                  /*dialogsData={props.state.dialogPage.dialogsData}*/
                 />
               }
             />

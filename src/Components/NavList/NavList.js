@@ -1,7 +1,6 @@
 import style from "./NavList.module.css";
 import { NavLink } from "react-router-dom";
-import Friends from "./Friends/Friends";
-import store from "../../Redux/Store";
+import FriendsContainer from "./Friends/FriendsContainer";
 
 const NavList = (props) => {
   return (
@@ -22,9 +21,9 @@ const NavList = (props) => {
         <NavLink to="/Settings">Settings</NavLink>
       </div>
       <div>
-        {/*<div>
-          <Friends shortcutData={props.friendsPage.shortcutData} />
-        </div>*/}
+        <div>
+          <FriendsContainer /*shortcutData={props.friendsPage.shortcutData}*/ />
+        </div>
       </div>
     </nav>
   );

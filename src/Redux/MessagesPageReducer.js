@@ -15,17 +15,21 @@ let initialState = {
 
 const MessagesPageReducer = (state=initialState, action) => {
   switch (action.type) {
-    case "SEND_MESSAGE":
+    case "SEND_MESSAGE": {
       let newMessage = {
         image: "https://vologdamarafon.ru/static/img/no-photo.png",
         message: state.newMessageText,
       };
-      state.messageData.push(newMessage);
-      state.newMessageText = "";
-      break;
+      let stateCopy = {...state};
+      stateCopy.messageData = [...state.messageData]
+      stateCopy.messageData.push(newMessage);
+      stateCopy.newMessageText = "";
+      return stateCopy;
+    }
     case "UPDATE_NEW_MESSAGE_TEXT":
-      state.newMessageText = action.newMText;
-      break;
+      let stateCopy = {...state};
+      stateCopy.newMessageText = action.newMText;
+      return stateCopy;
     default:
       return state;
   }

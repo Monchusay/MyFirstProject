@@ -1,11 +1,10 @@
 import style from "./MyPosts.module.css";
 import Post from "./Post/Post";
 import React from "react";
-import PostContainer from "./Post/PostContainer";
 
 const MyPosts = (props) => {
   let postElements = props.postData.map((post) => (
-    <PostContainer
+    <Post
         key={post.id}
       dispatch={props.dispatch}
       {...post}

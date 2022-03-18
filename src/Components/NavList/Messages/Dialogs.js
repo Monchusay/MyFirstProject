@@ -21,9 +21,7 @@ const Dialogs = (props) => {
           <Route
             path="/1"
             element={
-              <MessagesContainer
-                  /*store={props.store}*/
-              />
+              <MessagesContainer/>
             }
           />
         </Routes>

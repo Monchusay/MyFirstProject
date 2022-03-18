@@ -2,14 +2,13 @@ import style from "./App.module.css";
 import Header from "./Components/Header/Header";
 import NavList from "./Components/NavList/NavList";
 import ProfilePage from "./Components/ProfilePage/ProfilePage";
-import Dialogs from "./Components/NavList/Messages/Dialogs";
 import News from "./Components/NavList/News/News";
 import Settings from "./Components/NavList/Settings/Settings";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
 import MusicContainer from "./Components/NavList/Music/MusicContainer";
 import DialogsContainer from "./Components/NavList/Messages/DialogsContainer";
 
-const App = (props) => {
+const App = () => {
   return (
     <BrowserRouter>
       <div className={style.appWrapper}>
@@ -30,10 +29,7 @@ const App = (props) => {
             <Route
               path="/Dialogs/*"
               element={
-                <DialogsContainer
-                    /*store={props.store}*/
-                  /*dialogsData={props.state.dialogPage.dialogsData}*/
-                />
+                <DialogsContainer/>
               }
             />
             <Route path="/News/*" element={<News />} />

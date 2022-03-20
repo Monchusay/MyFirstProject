@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  addPostActionCreator,
+  addPostActionCreator, postHasDisLikedActionCreator, postHasLikedActionCreator,
   updateNewPostTextActionCreator,
 } from "../../../Redux/ProfilePageReducer";
 import MyPosts from "./MyPosts";
@@ -40,8 +40,15 @@ let mapStateToProps = (state) => {
     newPostText: state.profilePage.newPostText
   }
 }
+
 let mapDispatchToProps = (dispatch) => {
   return {
+    postHasLiked: (id) => {
+      dispatch(postHasLikedActionCreator(id))
+    },
+    postHasDisliked: (id) => {
+      dispatch(postHasDisLikedActionCreator(id))
+    },
     updateNewPostText: (text) => {
       dispatch(updateNewPostTextActionCreator(text));
     },

@@ -1,16 +1,13 @@
 import style from "./Post.module.css";
-import {
-  postHasDisLikedActionCreator,
-  postHasLikedActionCreator,
-} from "../../../../Redux/ProfilePageReducer";
 
  const Post = (props) => {
+
   let PostHasLiked = () => {
-    props.dispatch(postHasLikedActionCreator(props.id));
+      props.postHasLiked(props.id)
   };
 
   let PostHasDisliked = () => {
-    props.dispatch(postHasDisLikedActionCreator(props.id));
+      props.postHasDisliked(props.id)
   };
 
   return (

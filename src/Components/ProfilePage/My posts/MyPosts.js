@@ -1,12 +1,13 @@
 import style from "./MyPosts.module.css";
-import Post from "./Post/Post";
 import React from "react";
+import Post from "./Post/Post";
 
 const MyPosts = (props) => {
   let postElements = props.postData.map((post) => (
     <Post
+        postHasLiked={props.postHasLiked}
+        postHasDisliked={props.postHasDisliked}
         key={post.id}
-      dispatch={props.dispatch}
       {...post}
     />
   ));
@@ -27,6 +28,7 @@ const MyPosts = (props) => {
       My Posts
       <div className={style.item1}>
         <textarea
+            placeholder= "Type here"
           onChange={onPostChange}
           className={style.textareaNewPost}
           ref={NewPostElement}

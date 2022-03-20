@@ -16,36 +16,38 @@ let initialState = {
           "https://static8.depositphotos.com/1156926/1012/i/600/depositphotos_10120856-stock-photo-toad-isolated-on-white-background.jpg",
     },
   ],
-  newPostText: "<type here>",
+  newPostText: "",
 };
 
 const ProfilePageReducer = (state = initialState, action) => {
 
   let stateCopy;
+  stateCopy = {...state}
+  stateCopy.postData = [...state.postData]
 
-  if (action.type === "ADD_POST") {
-    let newPost = {
-      id: 3,
-      message: state.newPostText,
-      likesCount: 0,
-      DislikesCount: 0,
-      image: "https://vologdamarafon.ru/static/img/no-photo.png",
-    };
-    stateCopy = {...state}
-    stateCopy.postData = [...state.postData]
-    stateCopy.postData.push(newPost);
-    stateCopy.newPostText = "";
-    return stateCopy;
-  } else if (action.type === "UPDATE_NEW_POST_TEXT") {
-    stateCopy = {...state}
-    stateCopy.newPostText = action.newText;
-    return stateCopy;
-  } else if (action.type === "POST_HAS_LIKED") {
-    let postIndex = state.postData.findIndex((post) => post.id === action.id);
-    state.postData[postIndex].likesCount += 1;
-  } else if (action.type === "POST_HAS_DISLIKED") {
-    let postIndex = state.postData.findIndex((post) => post.id === action.id);
-    state.postData[postIndex].DislikesCount += 1;
+  switch (action.type) {
+    case "ADD_POST":
+      let newPost = {
+        id: 3,
+        message: state.newPostText,
+        likesCount: 0,
+        DislikesCount: 0,
+        image: "https://vologdamarafon.ru/static/img/no-photo.png",
+      };
+      stateCopy.postData.push(newPost);
+      stateCopy.newPostText = "";
+      return stateCopy;
+    case "UPDATE_NEW_POST_TEXT":
+      stateCopy.newPostText = action.newText;
+      return stateCopy;
+    case "POST_HAS_LIKED":
+      let postIndex1 = stateCopy.postData.findIndex((post) => post.id === action.id);
+      stateCopy.postData[postIndex1].likesCount += 1;
+      return stateCopy;
+    case "POST_HAS_DISLIKED":
+      let postIndex = stateCopy.postData.findIndex((post) => post.id === action.id);
+      stateCopy.postData[postIndex].DislikesCount += 1;
+      return stateCopy;
   }
   return state;
 };

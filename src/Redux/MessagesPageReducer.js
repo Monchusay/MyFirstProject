@@ -14,26 +14,28 @@ let initialState = {
 };
 
 const MessagesPageReducer = (state=initialState, action) => {
+
+  let stateCopy;
+
   switch (action.type) {
     case "SEND_MESSAGE": {
       let newMessage = {
         image: "https://vologdamarafon.ru/static/img/no-photo.png",
         message: state.newMessageText,
       };
-      let stateCopy = {...state};
+      stateCopy = {...state};
       stateCopy.messageData = [...state.messageData]
       stateCopy.messageData.push(newMessage);
       stateCopy.newMessageText = "";
       return stateCopy;
     }
     case "UPDATE_NEW_MESSAGE_TEXT":
-      let stateCopy = {...state};
+      stateCopy = {...state};
       stateCopy.newMessageText = action.newMText;
       return stateCopy;
     default:
       return state;
   }
-
   return state;
 };
 

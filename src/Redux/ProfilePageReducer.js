@@ -20,6 +20,9 @@ let initialState = {
 };
 
 const ProfilePageReducer = (state = initialState, action) => {
+
+  let stateCopy;
+
   if (action.type === "ADD_POST") {
     let newPost = {
       id: 3,
@@ -28,10 +31,15 @@ const ProfilePageReducer = (state = initialState, action) => {
       DislikesCount: 0,
       image: "https://vologdamarafon.ru/static/img/no-photo.png",
     };
-    state.postData.push(newPost);
-    state.newPostText = "";
+    stateCopy = {...state}
+    stateCopy.postData = [...state.postData]
+    stateCopy.postData.push(newPost);
+    stateCopy.newPostText = "";
+    return stateCopy;
   } else if (action.type === "UPDATE_NEW_POST_TEXT") {
-    state.newPostText = action.newText;
+    stateCopy = {...state}
+    stateCopy.newPostText = action.newText;
+    return stateCopy;
   } else if (action.type === "POST_HAS_LIKED") {
     let postIndex = state.postData.findIndex((post) => post.id === action.id);
     state.postData[postIndex].likesCount += 1;

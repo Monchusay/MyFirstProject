@@ -7,31 +7,20 @@ import Settings from "./Components/NavList/Settings/Settings";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
 import MusicContainer from "./Components/NavList/Music/MusicContainer";
 import DialogsContainer from "./Components/NavList/Messages/DialogsContainer";
+import AllUsersContainer from "./Components/NavList/AllUsers/AllUsersContainer";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className={style.appWrapper}>
         <Header />
-        <NavList/>
+        <NavList />
         <div className={style.MainObj}>
           <Routes>
-            <Route
-              path="/Music/*"
-              element={<MusicContainer/>}
-            />
-            <Route
-              path="/Profile/*"
-              element={
-                <ProfilePage/>
-              }
-            />
-            <Route
-              path="/Dialogs/*"
-              element={
-                <DialogsContainer/>
-              }
-            />
+            <Route path="/AllUsers/*" element={<AllUsersContainer />} />
+            <Route path="/Music/*" element={<MusicContainer />} />
+            <Route path="/Profile/*" element={<ProfilePage />} />
+            <Route path="/Dialogs/*" element={<DialogsContainer />} />
             <Route path="/News/*" element={<News />} />
             <Route path="/Settings/*" element={<Settings />} />
           </Routes>

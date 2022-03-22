@@ -1,0 +1,45 @@
+.User img {
+  width: 100px;
+  height: 100px;
+  border-radius: 40px;
+}
+
+.User {
+    display: grid;
+    grid-template-rows: repeat(4, 40px);
+    grid-template-columns: repeat(4, 200px);
+}
+.profilePicture {
+    grid-column: 1;
+    grid-row: 1;
+}
+.fullName {
+    grid-column: 2;
+    grid-row: 1;
+}
+.fullName:hover {
+    color: red;
+}
+.status {
+    grid-column: 2;
+    grid-row: 2;
+}
+.location {
+    grid-column: 4;
+    grid-row: 1;
+}
+.followButton {
+    grid-column: 1;
+    grid-row: 4;
+}
+.FollowButton {
+    background-color: green;
+    width: 100px;
+    height: 25px;
+}
+.UnfollowButton {
+    background-color: red;
+    width: 100px;
+    height: 25px;
+}
+

@@ -20,9 +20,12 @@ const NavList = (props) => {
       <div className={style.item}>
         <NavLink to="/Settings">Settings</NavLink>
       </div>
+        <div className={style.item}>
+            <NavLink to={"/AllUsers"}>All Users</NavLink>
+        </div>
       <div>
         <div>
-          <FriendsContainer /*shortcutData={props.friendsPage.shortcutData}*/ />
+          <FriendsContainer/>
         </div>
       </div>
     </nav>

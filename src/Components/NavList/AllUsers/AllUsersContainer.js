@@ -1,11 +1,14 @@
 import React from "react";
 import {connect} from "react-redux";
 import AllUsers from "./AllUsers";
-import {makeFollowActionCreator, makeUnfollowActionCreator} from "../../../Redux/AllUsersPageReducer";
+import {
+    makeFollowActionCreator,
+    makeUnfollowActionCreator,
+    setUsersActionCreator
+} from "../../../Redux/AllUsersPageReducer";
 
 let mapStateToProps = (state) => {
     return {
-        followed: state.allUsersPage.UsersData.followed,
         UsersData: state.allUsersPage.UsersData
     }
 }
@@ -17,6 +20,9 @@ let mapDispatchToProps = (dispatch) => {
         },
         unfollowUser: (id) => {
             dispatch(makeUnfollowActionCreator(id))
+        },
+        setUsers: (UsersData) => {
+            dispatch(setUsersActionCreator(UsersData))
         }
     }
 }

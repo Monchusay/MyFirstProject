@@ -1,12 +1,13 @@
 import React from "react";
 import User from "./User/User";
 import style from "./AllUsers.module.css"
+import axios from "axios";
 
 const AllUsers = (props) => {
 
     if (props.UsersData.length === 0) {
         props.setUsers([
-            {
+            /*{
                 id: 1,
                 followed: true,
                 profilePicture: "https://ichef.bbci.co.uk/news/640/cpsprodpb/16620/production/_91408619_55df76d5-2245-41c1-8031-07a4da3f313f.jpg",
@@ -29,7 +30,7 @@ const AllUsers = (props) => {
                 fullName: "DimaP",
                 status: "Тупо батя",
                 location: "Russia"
-            }
+            }*/
         ])}
 
     let userElements =  props.UsersData.map((user)  => (

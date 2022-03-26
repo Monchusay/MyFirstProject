@@ -1,7 +1,7 @@
 import React from "react";
-import User from "./User/User";
 import style from "./AllUsers.module.css"
 import axios from "axios";
+import UserClass from "./User/UserClass";
 
 const AllUsers = (props) => {
 
@@ -12,7 +12,7 @@ const AllUsers = (props) => {
     }
 
     let userElements =  props.UsersData.map((user)  => (
-        <User
+        <UserClass
             followUser={props.followUser}
             unfollowUser={props.unfollowUser}
             key={user.id}

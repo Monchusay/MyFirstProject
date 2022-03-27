@@ -4,7 +4,7 @@ import Song from "./Song/Song";
 import React from "react";
 import axios from "axios";
 
-class Music extends React.Component {
+class MusicClass extends React.Component {
 
   constructor(props) {
     super(props);
@@ -46,4 +46,4 @@ class Music extends React.Component {
   }
 }
 
-export default Music;
+export default MusicClass;

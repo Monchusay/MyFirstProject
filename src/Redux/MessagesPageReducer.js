@@ -33,6 +33,9 @@ const MessagesPageReducer = (state=initialState, action) => {
       stateCopy = {...state};
       stateCopy.newMessageText = action.newMText;
       return stateCopy;
+    case "SET_MESSAGES": {
+      return {...state, messageData: [...action.messageData]}
+    }
     default:
       return state;
   }
@@ -52,5 +55,11 @@ export const sendMessageActionCreator = () => {
   };
 };
 
+export const setMessagesActionCreator = (messageData) => {
+  return {
+    type: "SET_MESSAGES",
+    messageData: messageData
+  };
+};
 
 export default MessagesPageReducer

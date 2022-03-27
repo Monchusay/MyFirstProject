@@ -1,6 +1,7 @@
 import React from "react";
-import {sendMessageActionCreator,
-  updateNewMessageTextActionCreator,
+import {
+    sendMessageActionCreator, setMessagesActionCreator,
+    updateNewMessageTextActionCreator,
 } from "../../../../Redux/MessagesPageReducer";
 import Messages from "./Messages";
 import {connect} from "react-redux";
@@ -44,6 +45,9 @@ let mapDispatchToProps = (dispatch) => {
         },
         updateNewMessageText: (messageText) => {
             dispatch(updateNewMessageTextActionCreator(messageText));
+        },
+        setMessages: (messageData) => {
+            dispatch(setMessagesActionCreator(messageData))
         }
     }
 }

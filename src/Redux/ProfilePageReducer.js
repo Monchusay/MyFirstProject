@@ -1,21 +1,5 @@
 let initialState = {
-  postData: [
-    {
-      id: 1,
-      message: "I wanna commit suicide",
-      likesCount: 69,
-      DislikesCount: 11,
-      image: "https://thedb.ru/upload/image/toad.png",
-    },
-    {
-      id: 2,
-      message: "Go on then Lol",
-      likesCount: 20,
-      DislikesCount: 42,
-      image:
-          "https://static8.depositphotos.com/1156926/1012/i/600/depositphotos_10120856-stock-photo-toad-isolated-on-white-background.jpg",
-    },
-  ],
+  postData: [],
   newPostText: "",
 };
 

@@ -1,6 +1,6 @@
-import Dialogs from "./Dialogs";
 import {connect} from "react-redux";
 import {setDialogsActionCreator} from "../../../Redux/DialogPageReducer";
+import DialogsClass from "./DialogsClass";
 
 /*const Dialogs = (props) => {
   let dialogsElements = props.dialogsData.map((dialog) => (
@@ -44,6 +44,6 @@ let mapDispatchToProps = (dispatch) => {
     }
 }
 
-const DialogsContainer = connect (mapStateToProps,mapDispatchToProps)(Dialogs);
+const DialogsContainer = connect (mapStateToProps,mapDispatchToProps)(DialogsClass);
 
 export default DialogsContainer;

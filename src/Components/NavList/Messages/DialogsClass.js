@@ -1,9 +1,9 @@
 import style from "./Dialogs.module.css";
 import Dialog from "./Dialog/Dialog";
 import { Routes, Route } from "react-router-dom";
-import MessagesContainer from "./Messages/MessagesContainer";
 import React from "react";
 import axios from "axios";
+import MessagesContainer from "./Messages/MessagesContainer";
 
 class DialogsClass extends React.Component {
 

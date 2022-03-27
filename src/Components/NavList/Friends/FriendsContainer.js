@@ -1,5 +1,7 @@
 import {connect} from "react-redux";
 import Friends from "./Friends";
+import {setFriendsActionCreator} from "../../../Redux/FriendsPageReducer";
+import FriendsClass from "./FriendsClass";
 
 /*const Friends = (props) => {
   let FriendsShortcut = props.shortcutData.map((friend) => (
@@ -23,11 +25,13 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-
+        setFriends: (shortcutData) => {
+            dispatch(setFriendsActionCreator(shortcutData))
+        }
     }
 }
 
-const FriendsContainer = connect (mapStateToProps, mapDispatchToProps)(Friends);
+const FriendsContainer = connect (mapStateToProps, mapDispatchToProps)(FriendsClass);
 
 
 export default FriendsContainer;

@@ -3,7 +3,6 @@ import {
   addPostActionCreator, postHasDisLikedActionCreator, postHasLikedActionCreator, setPostsActionCreator,
   updateNewPostTextActionCreator,
 } from "../../../Redux/ProfilePageReducer";
-import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
 import MyPostsClass from "./MyPostsClass";
 

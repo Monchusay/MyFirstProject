@@ -13,8 +13,8 @@ class DialogsClass extends React.Component {
     }
 
     componentDidMount() {
-        axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/dialogsData").then(response => {
-            this.props.setDialogs(response.data)
+        axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/data").then(response => {
+            this.props.setDialogs(response.data.dialogsData)
         })
     }
 

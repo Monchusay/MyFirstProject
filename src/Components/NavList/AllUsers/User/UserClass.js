@@ -3,6 +3,10 @@ import React from "react";
 
 class UserClass extends React.Component {
 
+    constructor(props) {
+        super(props);
+    }
+
     OnFollow = () => {
         this.props.followUser(this.props.id)
     }

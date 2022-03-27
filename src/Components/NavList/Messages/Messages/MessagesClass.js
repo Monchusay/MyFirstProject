@@ -10,8 +10,8 @@ class MessagesClass extends React.Component {
     }
 
     componentDidMount() {
-        axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/messageData").then(response => {
-            this.props.setMessages(response.data)
+        axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/data").then(response => {
+            this.props.setMessages(response.data.messageData)
         })
     }
 

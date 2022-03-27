@@ -11,8 +11,8 @@ class MusicClass extends React.Component {
   }
 
   componentDidMount() {
-    axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/songData").then(response => {
-      this.props.setMusic(response.data)
+    axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/data").then(response => {
+      this.props.setMusic(response.data.songData)
     })
   }
 

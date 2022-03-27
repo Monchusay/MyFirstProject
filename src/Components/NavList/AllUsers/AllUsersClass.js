@@ -10,8 +10,8 @@ class AllUsersClass extends React.Component {
     }
 
     componentDidMount() {
-        axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/UserData").then(response => {
-            this.props.setUsers(response.data)
+        axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/data").then(response => {
+            this.props.setUsers(response.data.UserData)
         })
     }
 

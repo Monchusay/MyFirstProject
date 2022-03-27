@@ -10,8 +10,8 @@ class MyPostsClass extends React.Component {
   }
 
   componentDidMount() {
-    axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/postData").then(response => {
-      this.props.setPosts(response.data)
+    axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/data").then(response => {
+      this.props.setPosts(response.data.postData)
     })
   }
 

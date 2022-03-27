@@ -1,10 +1,11 @@
 import React from "react";
 import {
-  addPostActionCreator, postHasDisLikedActionCreator, postHasLikedActionCreator,
+  addPostActionCreator, postHasDisLikedActionCreator, postHasLikedActionCreator, setPostsActionCreator,
   updateNewPostTextActionCreator,
 } from "../../../Redux/ProfilePageReducer";
 import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
+import MyPostsClass from "./MyPostsClass";
 
 /*const MyPostsContainer = () => {
 
@@ -54,9 +55,12 @@ let mapDispatchToProps = (dispatch) => {
     },
     addPost: () => {
       dispatch(addPostActionCreator());
+    },
+    setPosts: (postData) => {
+      dispatch(setPostsActionCreator(postData))
     }
   }
 }
-const MyPostsContainer = connect(mapStateToProps,mapDispatchToProps)(MyPosts);
+const MyPostsContainer = connect(mapStateToProps,mapDispatchToProps)(MyPostsClass);
 
 export default MyPostsContainer;

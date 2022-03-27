@@ -48,6 +48,9 @@ const ProfilePageReducer = (state = initialState, action) => {
       let postIndex = stateCopy.postData.findIndex((post) => post.id === action.id);
       stateCopy.postData[postIndex].DislikesCount += 1;
       return stateCopy;
+    case "SET_POSTS": {
+      return {stateCopy, postData: [...action.postData]}
+    }
   }
   return state;
 };
@@ -76,6 +79,13 @@ export const updateNewPostTextActionCreator = (text) => {
   return {
     type: "UPDATE_NEW_POST_TEXT",
     newText: text,
+  };
+};
+
+export const setPostsActionCreator = (postData) => {
+  return {
+    type: "SET_POSTS",
+    postData: postData
   };
 };
 

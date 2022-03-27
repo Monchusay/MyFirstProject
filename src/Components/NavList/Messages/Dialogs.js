@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import MessagesContainer from "./Messages/MessagesContainer";
 
 const Dialogs = (props) => {
+
+
   let dialogsElements = props.dialogsData.map((dialog) => (
     <Dialog
       key={dialog.id}

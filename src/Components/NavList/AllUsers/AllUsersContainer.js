@@ -1,11 +1,11 @@
 import React from "react";
 import {connect} from "react-redux";
-import AllUsers from "./AllUsers";
 import {
     makeFollowActionCreator,
     makeUnfollowActionCreator,
     setUsersActionCreator
 } from "../../../Redux/AllUsersPageReducer";
+import AllUsersClass from "./AllUsersClass";
 
 let mapStateToProps = (state) => {
     return {
@@ -28,6 +28,6 @@ let mapDispatchToProps = (dispatch) => {
 }
 
 
-const AllUsersContainer = connect(mapStateToProps, mapDispatchToProps) (AllUsers);
+const AllUsersContainer = connect(mapStateToProps, mapDispatchToProps) (AllUsersClass);
 
 export default AllUsersContainer

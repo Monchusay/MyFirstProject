@@ -3,7 +3,6 @@ import {
     sendMessageActionCreator, setMessagesActionCreator,
     updateNewMessageTextActionCreator,
 } from "../../../../Redux/MessagesPageReducer";
-import Messages from "./Messages";
 import {connect} from "react-redux";
 import MessagesClass from "./MessagesClass";
 

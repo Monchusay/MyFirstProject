@@ -1,5 +1,4 @@
 import {connect} from "react-redux";
-import Friends from "./Friends";
 import {setFriendsActionCreator} from "../../../Redux/FriendsPageReducer";
 import FriendsClass from "./FriendsClass";
 

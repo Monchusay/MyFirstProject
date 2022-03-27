@@ -1,5 +1,6 @@
 import {connect} from "react-redux";
 import Music from "./Music";
+import {setMusicActionCreator} from "../../../Redux/MusicPageReducer";
 
 /*
 const Music = (props) => {
@@ -36,7 +37,9 @@ let mapStateToProps = (state) => {
 }
 let mapDispatchToProps = (dispatch) => {
   return {
-
+    setMusic: (songData) => {
+      dispatch(setMusicActionCreator(songData))
+    }
   }
 }
 

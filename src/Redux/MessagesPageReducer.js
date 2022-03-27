@@ -1,15 +1,5 @@
 let initialState = {
-  messageData: [
-    {
-      image: "https://vologdamarafon.ru/static/img/no-photo.png",
-      message: "Privet Dima",
-    },
-    {
-      image:
-          "https://www.meme-arsenal.com/memes/b5b6a757d1bd204196272992a74ebec3.jpg",
-      message: "Ny privet",
-    },
-  ],
+  messageData: [],
   newMessageText: "<type here>",
 };
 

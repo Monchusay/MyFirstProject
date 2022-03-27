@@ -5,6 +5,7 @@ import {
 } from "../../../../Redux/MessagesPageReducer";
 import Messages from "./Messages";
 import {connect} from "react-redux";
+import MessagesClass from "./MessagesClass";
 
 /*const MessagesContainer = () => {
   return (
@@ -51,6 +52,6 @@ let mapDispatchToProps = (dispatch) => {
         }
     }
 }
-const MessagesContainer = connect(mapStateToProps, mapDispatchToProps)(Messages);
+const MessagesContainer = connect(mapStateToProps, mapDispatchToProps)(MessagesClass);
 
 export default MessagesContainer;

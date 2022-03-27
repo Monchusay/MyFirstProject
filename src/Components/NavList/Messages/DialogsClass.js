@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import React from "react";
 import axios from "axios";
 import MessagesContainer from "./Messages/MessagesContainer";
+import MusicClass from "../Music/MusicClass";
 
 class DialogsClass extends React.Component {
 

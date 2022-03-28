@@ -4,19 +4,15 @@ import Song from "./Song/Song";
 import React from "react";
 import axios from "axios";
 
-class MusicClass extends React.Component {
+const Music = (props) => {
 
-  constructor(props) {
-    super(props);
-  }
-
-  componentDidMount() {
+  if (props.songData.length===0) {
     axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/data").then(response => {
-      this.props.setMusic(response.data.songData)
+      props.setMusic(response.data.songData)
     })
   }
 
-  songElement = this.props.songData.map((song) => (
+  let songElement = props.songData.map((song) => (
     <Song
       key={song.songName}
       image={song.image}
@@ -25,7 +21,6 @@ class MusicClass extends React.Component {
     />
   ));
 
-  render() {
     return (
       <div>
         <div className={style.Music}>
@@ -40,10 +35,9 @@ class MusicClass extends React.Component {
             </NavLink>
           </div>
         </div>
-        <div className={style.MySongs}>{this.songElement}</div>
+        <div className={style.MySongs}>{songElement}</div>
       </div>
     );
-  }
 }
 
-export default MusicClass;
+export default Music;

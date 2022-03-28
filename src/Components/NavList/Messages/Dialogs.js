@@ -4,21 +4,16 @@ import { Routes, Route } from "react-router-dom";
 import React from "react";
 import axios from "axios";
 import MessagesContainer from "./Messages/MessagesContainer";
-import MusicClass from "../Music/MusicClass";
 
-class DialogsClass extends React.Component {
+const Dialogs = (props) => {
 
-    constructor(props) {
-        super(props);
-    }
-
-    componentDidMount() {
+    if (props.dialogsData.length===0) {
         axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/data").then(response => {
-            this.props.setDialogs(response.data.dialogsData)
+            props.setDialogs(response.data.dialogsData)
         })
     }
 
-    dialogsElements = this.props.dialogsData.map((dialog) => (
+    let dialogsElements = props.dialogsData.map((dialog) => (
         <Dialog
             key={dialog.id}
             image={dialog.image}
@@ -26,11 +21,9 @@ class DialogsClass extends React.Component {
             id={dialog.id}
         />
     ));
-
-    render() {
         return (
             <div className={style.Dialogs}>
-                <div className={style.DialogItems}>{this.dialogsElements}</div>
+                <div className={style.DialogItems}>{dialogsElements}</div>
                 <div className={style.Messages}>
                     <Routes>
                         <Route
@@ -43,6 +36,5 @@ class DialogsClass extends React.Component {
                 </div>
             </div>
         );
-    };
 }
-export default DialogsClass;
+export default Dialogs;

@@ -4,7 +4,7 @@ import {
     updateNewMessageTextActionCreator,
 } from "../../../../Redux/MessagesPageReducer";
 import {connect} from "react-redux";
-import MessagesClass from "./MessagesClass";
+import Messages from "./Messages";
 
 /*const MessagesContainer = () => {
   return (
@@ -51,6 +51,6 @@ let mapDispatchToProps = (dispatch) => {
         }
     }
 }
-const MessagesContainer = connect(mapStateToProps, mapDispatchToProps)(MessagesClass);
+const MessagesContainer = connect(mapStateToProps, mapDispatchToProps)(Messages);
 
 export default MessagesContainer;

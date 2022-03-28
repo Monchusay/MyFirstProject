@@ -1,6 +1,6 @@
 let initialState = {
   messageData: [],
-  newMessageText: "<type here>",
+  newMessageText: "",
 };
 
 const MessagesPageReducer = (state=initialState, action) => {

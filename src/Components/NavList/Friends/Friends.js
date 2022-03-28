@@ -3,19 +3,15 @@ import style from "./Friends.module.css";
 import React from "react";
 import axios from "axios";
 
-class FriendsClass extends React.Component {
+const Friends = (props) => {
 
-    constructor(props) {
-        super(props);
-    }
-
-    componentDidMount() {
+    if (props.postData.length===0) {
         axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/shortcutData").then(response => {
-            this.props.setFriends(response.data)
+            props.setFriends(response.data.shortcutData)
         })
     }
 
-  FriendsShortcut = this.props.shortcutData.map((friend) => (
+  let FriendsShortcut = props.shortcutData.map((friend) => (
     <Friend
       key={friend.friendName}
       image={friend.image}
@@ -23,14 +19,12 @@ class FriendsClass extends React.Component {
     />
   ));
 
-  render() {
     return (
       <div className={style.FriendsShortcut}>
         <div className={style.Friends}>Friends</div>
-        <div className={style.chelIb}>{this.FriendsShortcut}</div>
+        <div className={style.chelIb}>{FriendsShortcut}</div>
       </div>
     );
-  }
 }
 
-export default FriendsClass;
+export default Friends;

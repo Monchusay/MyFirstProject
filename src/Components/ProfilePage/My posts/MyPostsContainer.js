@@ -4,7 +4,7 @@ import {
   updateNewPostTextActionCreator,
 } from "../../../Redux/ProfilePageReducer";
 import {connect} from "react-redux";
-import MyPostsClass from "./MyPostsClass";
+import MyPosts from "./MyPosts";
 
 /*const MyPostsContainer = () => {
 
@@ -60,6 +60,6 @@ let mapDispatchToProps = (dispatch) => {
     }
   }
 }
-const MyPostsContainer = connect(mapStateToProps,mapDispatchToProps)(MyPostsClass);
+const MyPostsContainer = connect(mapStateToProps,mapDispatchToProps)(MyPosts);
 
 export default MyPostsContainer;

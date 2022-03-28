@@ -5,8 +5,8 @@ import axios from "axios";
 
 const Friends = (props) => {
 
-    if (props.postData.length===0) {
-        axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/shortcutData").then(response => {
+    if (props.shortcutData.length===0) {
+        axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/data").then(response => {
             props.setFriends(response.data.shortcutData)
         })
     }

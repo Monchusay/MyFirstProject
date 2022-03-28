@@ -24,7 +24,7 @@ const NavList = (props) => {
             <NavLink to={"/AllUsers"}>All Users</NavLink>
         </div>
       <div>
-        <div>
+          <div>
           <FriendsContainer/>
         </div>
       </div>

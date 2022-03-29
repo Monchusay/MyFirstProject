@@ -1,8 +1,8 @@
 let initialState = {
     songData: [],
-    pageSize: 6,
-    totalSongsCount: 15,
-    currentPage: 1
+    pageSize: 5,
+    totalSongsCount: 21,
+    currentPage: 2
 }
 
 const MusicPageReducer = (state=initialState,action) => {

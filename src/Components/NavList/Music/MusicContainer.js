@@ -32,7 +32,10 @@ const Music = (props) => {
 
 let mapStateToProps = (state) => {
   return {
-    songData: state.musicPage.songData
+    songData: state.musicPage.songData,
+    pageSize: state.musicPage.pageSize,
+    totalSongsCount: state.musicPage.totalSongsCount,
+    currentPage: state.musicPage.currentPage
   }
 }
 let mapDispatchToProps = (dispatch) => {

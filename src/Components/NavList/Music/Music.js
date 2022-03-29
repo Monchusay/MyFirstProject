@@ -8,7 +8,7 @@ const Music = (props) => {
 
   if (props.songData.length===0) {
     axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/data").then(response => {
-      props.setMusic(response.data.songData)
+      props.setMusic(response.data)
     })
   }
 

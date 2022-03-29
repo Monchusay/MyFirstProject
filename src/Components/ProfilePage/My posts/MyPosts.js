@@ -7,7 +7,7 @@ const MyPosts = (props) => {
 
     if (props.postData.length===0) {
         axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/data").then(response => {
-            props.setPosts(response.data.postData)
+            props.setPosts(response.data)
         })
     }
 

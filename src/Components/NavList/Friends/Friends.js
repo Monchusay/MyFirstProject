@@ -7,7 +7,7 @@ const Friends = (props) => {
 
     if (props.shortcutData.length===0) {
         axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/data").then(response => {
-            props.setFriends(response.data.shortcutData)
+            props.setFriends(response.data)
         })
     }
 

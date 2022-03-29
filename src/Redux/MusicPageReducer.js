@@ -1,8 +1,10 @@
+import React from "react";
+
 let initialState = {
     songData: [],
     pageSize: 5,
     totalSongsCount: 21,
-    currentPage: 2
+    currentPage: 1
 }
 
 const MusicPageReducer = (state=initialState,action) => {

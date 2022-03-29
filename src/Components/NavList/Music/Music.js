@@ -1,16 +1,16 @@
 import style from "./Music.module.css";
 import { NavLink } from "react-router-dom";
 import Song from "./Song/Song";
-import React, {useEffect} from "react";
+import React from "react";
 import axios from "axios";
 
 const Music = (props) => {
 
-    useEffect(()=> {
+    if (props.songData.length===0) {
             axios.get(`https://my-json-server.typicode.com/Monchusay/MyFirstProject/songData?_page=${props.currentPage}&_limit=${props.pageSize}`).then(response => {
                 props.setMusic(response.data)
             })
-    })
+    }
 
   let songElement = props.songData.map((song) => (
     <Song
@@ -31,8 +31,6 @@ const Music = (props) => {
             return <span className={props.currentPage === p && style.selectedPage}> {p} </span>
         })
 
-
-
         return (
             <div className={style.musicPage}>
                 <div className={style.MyMusic}>
@@ -45,10 +43,10 @@ const Music = (props) => {
                         Recommended
                     </NavLink>
                 </div>
+                <div className={style.MySongs}>{songElement}</div>
                 <div className={style.pagesCount}>
                     {aaa}
                 </div>
-                <div className={style.MySongs}>{songElement}</div>
             </div>
         )
 }

@@ -9,13 +9,9 @@ let initialState = {
 
 const MusicPageReducer = (state=initialState,action) => {
 
-    let stateCopy;
-    stateCopy = {...state}
-    stateCopy.songData = [...state.songData]
-
     switch (action.type) {
         case "SET_MUSIC": {
-            return {stateCopy, songData: [...action.songData]}
+            return {...state, songData: [...action.songData]}
         }
     }
     return state;

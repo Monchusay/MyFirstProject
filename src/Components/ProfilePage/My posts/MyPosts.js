@@ -6,7 +6,7 @@ import axios from "axios";
 const MyPosts = (props) => {
 
     if (props.postData.length===0) {
-        axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/data").then(response => {
+        axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/postData").then(response => {
             props.setPosts(response.data)
         })
     }

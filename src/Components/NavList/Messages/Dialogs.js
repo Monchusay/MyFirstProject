@@ -8,7 +8,7 @@ import MessagesContainer from "./Messages/MessagesContainer";
 const Dialogs = (props) => {
 
     if (props.dialogsData.length===0) {
-        axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/data").then(response => {
+        axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/dialogsData").then(response => {
             props.setDialogs(response.data)
         })
     }

@@ -6,7 +6,7 @@ import axios from "axios";
 const Messages = (props) => {
 
     if (props.messageData.length===0) {
-        axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/data").then(response => {
+        axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/messageData").then(response => {
             props.setMessages(response.data)
         })
     }

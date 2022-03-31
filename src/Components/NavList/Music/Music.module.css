@@ -39,11 +39,15 @@
 }
 
 .pagesCount {
+  padding: 20px;
   grid-row: 2;
   grid-column: 1;
 }
 
 .selectedPage {
-  padding: 15px;
+  word-spacing: 30px;
+}
+.selectedPage:hover {
+  color: green;
 }
 

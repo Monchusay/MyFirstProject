@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
-import {setMusicActionCreator} from "../../../Redux/MusicPageReducer";
-import Music from "./Music";
+import {setCurrentPageActionCreator, setMusicActionCreator} from "../../../Redux/MusicPageReducer";
+import MusicAPIComponent from "./MusicAPIComponent";
 
 /*
 const Music = (props) => {
@@ -42,10 +42,13 @@ let mapDispatchToProps = (dispatch) => {
   return {
     setMusic: (songData) => {
       dispatch(setMusicActionCreator(songData))
+    },
+    setCurrentPage: (pageNumber) => {
+      dispatch(setCurrentPageActionCreator(pageNumber))
     }
   }
 }
 
-const MusicContainer = connect (mapStateToProps, mapDispatchToProps)(Music);
+const MusicContainer = connect (mapStateToProps, mapDispatchToProps)(MusicAPIComponent);
 
 export default MusicContainer;

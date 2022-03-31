@@ -13,9 +13,19 @@ const MusicPageReducer = (state=initialState,action) => {
         case "SET_MUSIC": {
             return {...state, songData: [...action.songData]}
         }
+        case "SET_CURRENT_PAGE": {
+            return {...state, currentPage: action.currentPage }
+        }
     }
     return state;
 }
+
+export const setCurrentPageActionCreator = (currentPage) => {
+    return {
+        type: "SET_CURRENT_PAGE",
+        currentPage: currentPage
+    };
+};
 
 export const setMusicActionCreator = (songData) => {
     return {

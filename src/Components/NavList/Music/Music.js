@@ -1,24 +1,15 @@
+import React from "react";
 import style from "./Music.module.css";
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import Song from "./Song/Song";
-import React, {useEffect, useState} from "react";
-import axios from "axios";
 
-const Music = (props) => {
+let Music = (props) => {
 
     let pagesCount = Math.ceil(props.totalSongsCount / props.pageSize);
-    let pages = []
+    let pages = [];
     for (let i = 0; i < pagesCount; i++) {
-        pages.push(i+1);
+        pages.push(i + 1);
     }
-
-    useEffect(() => {
-        axios
-            .get(`https://my-json-server.typicode.com/Monchusay/MyFirstProject/songData?_page=${props.currentPage}&_limit=${props.pageSize}`)
-            .then((response) => {
-                props.setMusic(response.data)
-            });
-    },[])
 
     let songElement = props.songData.map((song, index) => (
         <Song
@@ -29,28 +20,34 @@ const Music = (props) => {
         />
     ));
 
+
     return (
-        <div className={style.musicPage}>
-            <div className={style.MyMusic}>
-                <NavLink to="/Music/MyMusic" className={style.MyMusic1}>
-                    My Music
-                </NavLink>
-            </div>
-            <div className={style.Recommended}>
-                <NavLink to="/Music/Recommended" className={style.Recommended1}>
-                    Recommended
-                </NavLink>
-            </div>
-            <div className={style.MySongs}>{songElement}</div>
-            <div className={style.pagesCount}>
-                {pages.map((p) => {
-                return (
-                <span  key={Math.random()} className={props.currentPage === p && style.selectedPage}>{p}</span>
-                )
-            })}
-            </div>
-        </div>
-    );
+     <div className={style.musicPage}>
+         <div className={style.MyMusic}>
+             <NavLink to="/Music/MyMusic" className={style.MyMusic1}>
+                 My Music
+             </NavLink>
+         </div>
+         <div className={style.Recommended}>
+             <NavLink to="/Music/Recommended" className={style.Recommended1}>
+                 Recommended
+             </NavLink>
+         </div>
+         <div className={style.MySongs}>{songElement}</div>
+         <div className={style.pagesCount}>
+             {pages.map((p) => {
+                 return (
+                     <span
+                         onClick={(e) => {props.onPageChange(p)}}
+                         key={Math.random()}
+                         className={style.selectedPage}>
+              {p}
+            </span>
+                 );
+             })}
+         </div>
+     </div>
+ )
 }
 
-export default Music;
+export default Music

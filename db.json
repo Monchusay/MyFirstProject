@@ -70,8 +70,8 @@
     },
     {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
+      "singer": " Люся Чеботина",
+      "songName": " - СОЛНЦЕ МОНАКО"
     },
     {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
@@ -85,8 +85,38 @@
     },
     {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
+      "singer": " МАЛИНОВАЯ ЛАДА",
+      "songName": " - GAYAZOV$ BROTHER$"
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
+      "singer": " Феникс",
+      "songName": " - ANNA ASTI"
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
+      "singer": " Седьмой лепесток",
+      "songName": " - Антон Токарев"
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
+      "singer": " Bones",
+      "songName": " - Imagine Dragons"
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
+      "singer": " Beggin'",
+      "songName": " - Måneskin"
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
+      "singer": " Я никому не верю",
+      "songName": " - Би-2"
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
+      "singer": " Astronaut In The Ocean",
+      "songName": " - Masked Wolf"
     },
     {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
@@ -95,73 +125,43 @@
     },
     {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
+      "singer": " Heart Instructions",
+      "songName": " - Minelli"
     },
     {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
+      "singer": " Если устал",
+      "songName": " - Мари Краймбрери"
     },
     {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
+      "singer": " Ягода малинка",
+      "songName": " - Хабиб"
     },
     {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
+      "singer": " RandomSongName1",
+      "songName": " - RandomSingerName1"
     },
     {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
+      "singer": " RandomSongName2",
+      "songName": " - RandomSingerName2"
     },
     {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
+      "singer": " RandomSongName3",
+      "songName": " - RandomSingerName3"
     },
     {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
+      "singer": " RandomSongName4",
+      "songName": " - RandomSingerName4"
     },
     {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
-    },
-    {
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
-    },
-    {
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
-    },
-    {
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
-    },
-    {
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
-    },
-    {
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
-    },
-    {
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S9f-aAWOmCopR_OK9lBFW0PqvaXF-y4xQw&usqp=CAU",
-      "singer": " Eminem",
-      "songName": " - RapGod"
+      "singer": " RandomSongName5",
+      "songName": " - RandomSingerName5"
     }
   ],
   "messageData": [

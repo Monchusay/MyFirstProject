@@ -2,6 +2,8 @@ import React from "react";
 import style from "./Music.module.css";
 import {NavLink} from "react-router-dom";
 import Song from "./Song/Song";
+import Preloader from "../../Common/Preloader";
+
 
 let Music = (props) => {
 
@@ -23,6 +25,7 @@ let Music = (props) => {
 
     return (
      <div className={style.musicPage}>
+         <div className={style.isFetching}>{props.isFetching ? <Preloader/> : null}</div>
          <div className={style.MyMusic}>
              <NavLink to="/Music/MyMusic" className={style.MyMusic1}>
                  My Music

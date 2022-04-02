@@ -1,6 +1,6 @@
 .musicPage {
   display: grid;
-  grid-template-columns: repeat(4, 250px);
+  grid-template-columns: repeat(3, 400px);
   grid-template-rows: repeat(3, 50px);
 }
 
@@ -49,5 +49,13 @@
 }
 .selectedPage:hover {
   color: green;
+}
+.isFetching {
+  grid-row: 3;
+  grid-column: 2;
+}
+.isFetching img {
+  width: 80px;
+  height: 80px;
 }
 

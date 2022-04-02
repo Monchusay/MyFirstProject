@@ -4,7 +4,8 @@ let initialState = {
     songData: [],
     pageSize: 5,
     totalSongsCount: 21,
-    currentPage: 1
+    currentPage: 1,
+    isFetching: true
 }
 
 const MusicPageReducer = (state=initialState,action) => {
@@ -16,8 +17,18 @@ const MusicPageReducer = (state=initialState,action) => {
         case "SET_CURRENT_PAGE": {
             return {...state, currentPage: action.currentPage }
         }
+        case "TOGGLE_IS_FETCHING": {
+            return {...state, isFetching: action.isFetching}
+        }
     }
     return state;
+}
+
+export const toggleIsFetchingActionCreator = (isFetching) => {
+    return {
+        type: "TOGGLE_IS_FETCHING",
+        isFetching: isFetching
+    }
 }
 
 export const setCurrentPageActionCreator = (currentPage) => {

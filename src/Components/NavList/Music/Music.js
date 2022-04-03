@@ -22,7 +22,6 @@ let Music = (props) => {
         />
     ));
 
-
     return (
      <div className={style.musicPage}>
          <div className={style.isFetching}>{props.isFetching ? <Preloader/> : null}</div>

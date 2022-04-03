@@ -1,18 +1,36 @@
 import style from "./ProfilePage.module.css";
 import MyPostsContainer from "./My posts/MyPostsContainer";
-import {useEffect} from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
+import Preloader from "../Common/Preloader";
 
-const ProfilePageContainer = (props) => {
+const ProfilePage = (props) => {
 
-    useEffect(() => {
+  useEffect(() => {
+    axios
+      .get(
+        "https://my-json-server.typicode.com/Monchusay/MyFirstProject/profileInfoData"
+      )
+      .then((response) => {
+        props.setUserProfile(response.data);
+      });
+  }, []);
 
-    })
+  if (props.profileInfoData.length == 0 ) {
+    return <Preloader />;
+  }
 
   return (
-    <div className={style.ProfilePage}>
-      <MyPostsContainer {...props} />
+    <div>
+        <div>
+            <img src={props.profileInfoData[0].photo}/>
+        </div>
+      <div className={style.ProfilePage}>
+        <MyPostsContainer
+        />
+      </div>
     </div>
   );
 };
 
-export default ProfilePageContainer;
+export default ProfilePage;

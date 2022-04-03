@@ -1,13 +1,13 @@
 import style from "./App.module.css";
 import Header from "./Components/Header/Header";
 import NavList from "./Components/NavList/NavList";
-import ProfilePageContainer from "./Components/ProfilePage/ProfilePage";
 import News from "./Components/NavList/News/News";
 import Settings from "./Components/NavList/Settings/Settings";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
 import MusicContainer from "./Components/NavList/Music/MusicContainer";
 import DialogsContainer from "./Components/NavList/Messages/DialogsContainer";
 import AllUsersContainer from "./Components/NavList/AllUsers/AllUsersContainer";
+import ProfilePageContainer from "./Components/ProfilePage/ProfilePageContainer";
 
 const App = () => {
   return (

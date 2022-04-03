@@ -20,6 +20,7 @@ const AllUsers = (props) => {
       )
       .then((response) => {
         props.toggleIsFetching(false);
+        debugger
         props.setUsers(response.data);
       });
   }, []);

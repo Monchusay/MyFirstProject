@@ -1,6 +1,7 @@
 let initialState = {
   postData: [],
   newPostText: "",
+  profileInfoData: []
 };
 
 const ProfilePageReducer = (state = initialState, action) => {
@@ -33,11 +34,21 @@ const ProfilePageReducer = (state = initialState, action) => {
       stateCopy.postData[postIndex].DislikesCount += 1;
       return stateCopy;
     case "SET_POSTS": {
-      return {stateCopy, postData: [...action.postData]}
+      return {...state, postData: [...action.postData]}
+    }
+    case "SET_USER_PROFILE": {
+      return {...state, profileInfoData: [...action.profileInfoData]}
     }
   }
   return state;
 };
+
+export const setUserProfileActionCreator = (profileInfoData) => {
+  return {
+    type: "SET_USER_PROFILE",
+    profileInfoData: profileInfoData
+  }
+}
 
 export const postHasDisLikedActionCreator = (id) => {
   return {

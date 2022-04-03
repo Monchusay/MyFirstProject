@@ -1,10 +1,11 @@
 import style from "./MyPosts.module.css";
-import React from "react";
+import React, {useEffect} from "react";
 import Post from "./Post/Post";
 import axios from "axios";
-
 const MyPosts = (props) => {
-  if (props.postData.length === 0) {
+
+
+  useEffect(() => {
     axios
       .get(
         "https://my-json-server.typicode.com/Monchusay/MyFirstProject/postData"
@@ -12,7 +13,7 @@ const MyPosts = (props) => {
       .then((response) => {
         props.setPosts(response.data);
       });
-  }
+  },[])
 
   let postElements = props.postData.map((post) => (
     <Post

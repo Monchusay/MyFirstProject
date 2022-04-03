@@ -1,7 +1,7 @@
 import style from "./App.module.css";
 import Header from "./Components/Header/Header";
 import NavList from "./Components/NavList/NavList";
-import ProfilePage from "./Components/ProfilePage/ProfilePage";
+import ProfilePageContainer from "./Components/ProfilePage/ProfilePage";
 import News from "./Components/NavList/News/News";
 import Settings from "./Components/NavList/Settings/Settings";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
@@ -19,7 +19,7 @@ const App = () => {
           <Routes>
             <Route path="/AllUsers/*" element={<AllUsersContainer />} />
             <Route path="/Music/*" element={<MusicContainer />} />
-            <Route path="/Profile/*" element={<ProfilePage />} />
+            <Route path="/Profile/*" element={<ProfilePageContainer />} />
             <Route path="/Dialogs/*" element={<DialogsContainer />} />
             <Route path="/News/*" element={<News />} />
             <Route path="/Settings/*" element={<Settings />} />

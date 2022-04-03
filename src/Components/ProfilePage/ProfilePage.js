@@ -1,16 +1,18 @@
 import style from "./ProfilePage.module.css";
 import MyPostsContainer from "./My posts/MyPostsContainer";
+import {useEffect} from "react";
 
-const ProfilePage = (props) => {
+const ProfilePageContainer = (props) => {
+
+    useEffect(() => {
+
+    })
+
   return (
     <div className={style.ProfilePage}>
-      <div>
-        <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_focal-760x428,f_auto,q_auto:best/MSNBC/Components/Video/201609/a_ov_Pepe_160928.jpg" />
-      </div>
-      <div className={style.item1}>Avatar+description</div>
-      <MyPostsContainer/>
+      <MyPostsContainer {...props} />
     </div>
   );
 };
 
-export default ProfilePage;
+export default ProfilePageContainer;

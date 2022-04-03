@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Music from "./Music";
-import preloader2 from "../../../preloader2.svg";
 
 const MusicAPIComponent = (props) => {
+
   useEffect(() => {
     props.toggleIsFetching(true);
     axios

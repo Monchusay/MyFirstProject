@@ -23,6 +23,116 @@
       "fullName": "DimaP",
       "status": "Тупо батя",
       "location": "Russia"
+    },
+    {
+      "id": 4,
+      "followed": true,
+      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
+      "fullName": "name1",
+      "status": "status1",
+      "location": "Russia"
+    },{
+      "id": 5,
+      "followed": true,
+      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
+      "fullName": "name2",
+      "status": "status2",
+      "location": "Russia"
+    },{
+      "id": 6,
+      "followed": false,
+      "profilePicture":"https://vologdamarafon.ru/static/img/no-photo.png",
+      "fullName": "name3",
+      "status": "status3",
+      "location": "Russia"
+    },
+    {
+      "id": 7,
+      "followed": true,
+      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
+      "fullName": "name4",
+      "status": "status4",
+      "location": "Russia"
+    },
+    {
+      "id": 8,
+      "followed": true,
+      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
+      "fullName": "name5",
+      "status": "status5",
+      "location": "Russia"
+    },
+    {
+      "id": 9,
+      "followed": false,
+      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
+      "fullName": "name6",
+      "status": "status6",
+      "location": "Russia"
+    },
+    {
+      "id": 10,
+      "followed": false,
+      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
+      "fullName": "name7",
+      "status": "status7",
+      "location": "Russia"
+    },
+    {
+      "id": 11,
+      "followed": true,
+      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
+      "fullName": "name8",
+      "status": "status8",
+      "location": "Russia"
+    },
+    {
+      "id": 12,
+      "followed": true,
+      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
+      "fullName": "name9",
+      "status": "status9",
+      "location": "Russia"
+    },
+    {
+      "id": 13,
+      "followed": false,
+      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
+      "fullName": "name10",
+      "status": "status10",
+      "location": "Russia"
+    },
+    {
+      "id": 14,
+      "followed": true,
+      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
+      "fullName": "name11",
+      "status": "status11",
+      "location": "Russia"
+    },
+    {
+      "id": 15,
+      "followed": true,
+      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
+      "fullName": "name12",
+      "status": "status12",
+      "location": "Russia"
+    },
+    {
+      "id": 16,
+      "followed": false,
+      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
+      "fullName": "name13",
+      "status": "status13",
+      "location": "Russia"
+    },
+    {
+      "id": 17,
+      "followed": false,
+      "profilePicture":"https://vologdamarafon.ru/static/img/no-photo.png",
+      "fullName": "name14",
+      "status": "status14",
+      "location": "Russia"
     }
   ],
   "dialogsData": [

@@ -93,46 +93,6 @@
       "fullName": "name9",
       "status": "status9",
       "location": "Russia"
-    },
-    {
-      "id": 13,
-      "followed": false,
-      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
-      "fullName": "name10",
-      "status": "status10",
-      "location": "Russia"
-    },
-    {
-      "id": 14,
-      "followed": true,
-      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
-      "fullName": "name11",
-      "status": "status11",
-      "location": "Russia"
-    },
-    {
-      "id": 15,
-      "followed": true,
-      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
-      "fullName": "name12",
-      "status": "status12",
-      "location": "Russia"
-    },
-    {
-      "id": 16,
-      "followed": false,
-      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
-      "fullName": "name13",
-      "status": "status13",
-      "location": "Russia"
-    },
-    {
-      "id": 17,
-      "followed": false,
-      "profilePicture":"https://vologdamarafon.ru/static/img/no-photo.png",
-      "fullName": "name14",
-      "status": "status14",
-      "location": "Russia"
     }
   ],
   "dialogsData": [

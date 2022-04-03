@@ -5,7 +5,7 @@ import {
     makeUnfollowActionCreator,
     setUsersActionCreator
 } from "../../../Redux/AllUsersPageReducer";
-import AllUsersClass from "./AllUsersClass";
+import AllUsers from "./AllUsers";
 
 let mapStateToProps = (state) => {
     return {
@@ -28,6 +28,6 @@ let mapDispatchToProps = (dispatch) => {
 }
 
 
-const AllUsersContainer = connect(mapStateToProps, mapDispatchToProps) (AllUsersClass);
+const AllUsersContainer = connect(mapStateToProps, mapDispatchToProps) (AllUsers);
 
 export default AllUsersContainer

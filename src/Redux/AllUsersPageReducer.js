@@ -19,7 +19,7 @@ const AllUsersPageReducer = (state =initialState,action) => {
             stateCopy.UsersData[userIndex1].followed = true;
             return stateCopy;
         case "SET_USERS": {
-            return {stateCopy, UsersData: [...action.UsersData]}
+            return {...state, UsersData: [...action.UsersData]}
         }
     }
     return state;

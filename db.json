@@ -31,17 +31,19 @@
       "fullName": "name1",
       "status": "status1",
       "location": "Russia"
-    },{
+    },
+    {
       "id": 5,
       "followed": true,
       "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
       "fullName": "name2",
       "status": "status2",
       "location": "Russia"
-    },{
+    },
+    {
       "id": 6,
       "followed": false,
-      "profilePicture":"https://vologdamarafon.ru/static/img/no-photo.png",
+      "profilePicture": "https://vologdamarafon.ru/static/img/no-photo.png",
       "fullName": "name3",
       "status": "status3",
       "location": "Russia"

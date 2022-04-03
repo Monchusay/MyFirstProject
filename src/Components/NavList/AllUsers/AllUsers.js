@@ -1,9 +1,9 @@
 import React, {useEffect} from "react";
 import style from "./AllUsers.module.css"
 import axios from "axios";
-import UserClass from "./User/UserClass";
+import User from "./User/User";
 
-const AllUsersClass = (props) => {
+const AllUsers = (props) => {
 
     useEffect(() => {
         axios.get("https://my-json-server.typicode.com/Monchusay/MyFirstProject/UsersData")
@@ -13,7 +13,7 @@ const AllUsersClass = (props) => {
     },[])
 
     let userElements = props.UsersData.map((user) => (
-        <UserClass
+        <User
             followUser={props.followUser}
             unfollowUser={props.unfollowUser}
             key={user.id}
@@ -27,4 +27,4 @@ const AllUsersClass = (props) => {
             </div>
         )
     }
-export default AllUsersClass
+export default AllUsers

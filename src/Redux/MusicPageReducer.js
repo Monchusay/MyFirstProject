@@ -31,7 +31,7 @@ export const toggleIsFetchingActionCreator = (isFetching) => {
     }
 }
 
-export const setCurrentPageActionCreator = (currentPage) => {
+export const setCurrentMusicPageActionCreator = (currentPage) => {
     return {
         type: "SET_CURRENT_PAGE",
         currentPage: currentPage

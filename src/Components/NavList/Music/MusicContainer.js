@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import {
-  setCurrentPageActionCreator,
+  setCurrentMusicPageActionCreator,
   setMusicActionCreator,
   toggleIsFetchingActionCreator
 } from "../../../Redux/MusicPageReducer";
@@ -49,7 +49,7 @@ let mapDispatchToProps = (dispatch) => {
       dispatch(setMusicActionCreator(songData))
     },
     setCurrentPage: (pageNumber) => {
-      dispatch(setCurrentPageActionCreator(pageNumber))
+      dispatch(setCurrentMusicPageActionCreator(pageNumber))
     },
     toggleIsFetching: (isFetching) => {
       dispatch(toggleIsFetchingActionCreator(isFetching))

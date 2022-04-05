@@ -5,7 +5,6 @@ import User from "./User/User";
 import Preloader from "../../Common/Preloader";
 
 const AllUsers = (props) => {
-
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
   let pages = [];
   for (let i = 0; i < pagesCount; i++) {
@@ -20,7 +19,7 @@ const AllUsers = (props) => {
       )
       .then((response) => {
         props.toggleIsFetching(false);
-        debugger
+        debugger;
         props.setUsers(response.data);
       });
   }, []);
@@ -50,10 +49,13 @@ const AllUsers = (props) => {
   return (
     <div>
       <div className={style.PageCount}>
-          <div className={style.isFetching}>{props.isFetching ? <Preloader/> : null}</div>
+        <div className={style.isFetching}>
+          {props.isFetching ? <Preloader /> : null}
+        </div>
+        <div className={style.onPageChangeButton}>
         {pages.map((p) => {
-          return (
-            <button className={style.onPageChangeButton}
+            return (
+            <button
               onClick={(e) => {
                 onPageChange(p);
               }}
@@ -61,12 +63,11 @@ const AllUsers = (props) => {
             >
               {p}
             </button>
-          );
+            );
         })}
+        </div>
       </div>
-      <div className={style.userElements}>
-          {userElements}
-      </div>
+      <div className={style.userElements}>{userElements}</div>
     </div>
   );
 };

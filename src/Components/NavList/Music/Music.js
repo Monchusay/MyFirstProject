@@ -24,7 +24,7 @@ let Music = (props) => {
 
     return (
      <div className={style.musicPage}>
-         <div className={style.isFetching}>{props.isFetching ? <Preloader/> : null}</div>
+         <div className={style.isFetching}>{props.isFetching && <Preloader/>}</div>
          <div className={style.MyMusic}>
              <NavLink to="/Music/MyMusic" className={style.MyMusic1}>
                  My Music
@@ -35,7 +35,9 @@ let Music = (props) => {
                  Recommended
              </NavLink>
          </div>
-         <div className={style.MySongs}>{songElement}</div>
+         {props.isFetching ? null :
+             <div className={style.MySongs}>{songElement}</div>
+         }
          <div className={style.pagesCount}>
              {pages.map((p) => {
                  return (

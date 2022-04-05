@@ -49,6 +49,7 @@
 }
 .selectedPage:hover {
   color: green;
+  cursor: pointer;
 }
 .isFetching {
   grid-row: 3;

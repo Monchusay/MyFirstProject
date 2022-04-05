@@ -4,9 +4,16 @@
 .onPageChangeButton {
     padding: 10px;
     border-radius: 15px;
+    grid-column: 1;
+    grid-row: 1;
 }
 .PageCount {
+    display: grid;
     padding: 40px;
+    grid-template-rows: repeat(1, 50px);
+    grid-template-columns: repeat(2, 100px);
 }
 .isFetching {
+    grid-column: 2;
+    grid-row: 1;
 }

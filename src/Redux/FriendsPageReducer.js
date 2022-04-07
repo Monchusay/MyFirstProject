@@ -9,7 +9,7 @@ let initialState = {
             friendName: "HeheXD"
         },
         {
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHhAfBIMazKzEVP8Sej8X6xPU6JCIZtQIwHA&usqp=CAU",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHhAfBIMazKzEVP8Sej8X6xPU6JCIZtQIwHA&usqp=CAU",
             friendName: "Bogdan"
         }
     ]

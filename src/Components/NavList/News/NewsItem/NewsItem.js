@@ -1,28 +1,29 @@
-const NewsItem = (props) => {
-    return (
-        <div>
-            <div>
-                <img src={props.senderPic}/>
-            </div>
-            <div>
-                {props.senderName}
-            </div>
-            <div>
-                {props.sendingPic}
-            </div>
-            <div>
-                {props.sendingText}
-            </div>
-            <div>
-                Likes:
-            </div>
-            <div>
-                <button>
-                    Like
-                </button>
-            </div>
-        </div>
-    )
-}
+import style from "./NewsItem.module.css";
 
-export default NewsItem
+const NewsItem = (props) => {
+
+  let newsItemHasLiked = () => {
+    props.newsItemHasLiked(props.id);
+  };
+
+  return (
+    <div className={style.NewsItem}>
+      <div className={style.senderPic}>
+        <img src={props.senderPic} />
+      </div>
+      <div className={style.senderName}>{props.senderName}</div>
+      <div className={style.sendingPic}>
+        <img src={props.sendingPic} />
+      </div>
+      <div className={style.sendingText}>{props.sendingText}</div>
+      <div className={style.Likes}>Likes: {props.likesCount}</div>
+      <div className={style.Like}>
+        <div>
+          <button onClick={newsItemHasLiked}>Like</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NewsItem;

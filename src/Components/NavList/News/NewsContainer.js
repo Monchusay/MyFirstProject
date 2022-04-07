@@ -1,5 +1,6 @@
 import {connect} from "react-redux";
 import News from "./News";
+import {newsItemNasLikedActionCreator} from "../../../Redux/NewsPageReducer";
 
 let mapStateToProps = (state) => {
     return {
@@ -9,7 +10,9 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-
+        newsItemHasLiked: (id) => {
+            dispatch(newsItemNasLikedActionCreator(id))
+        }
     }
 }
 

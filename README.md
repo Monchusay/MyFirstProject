@@ -1,1 +1,1 @@
-## My first project
+## Redux, connect, axios pratice
